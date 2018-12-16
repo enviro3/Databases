@@ -1,0 +1,68 @@
+1) What data types do each of these values represent?
+  "A Clockwork Orange" => string
+  42 => integer
+  09/02/1945 => string
+  98.7 => float
+  $15.99 => string
+
+2) Explain in your own words when a database might be used. Explain when a text file  might be used.
+  A database would likely be used at a business to store client information. For instance, if you are a client at a hair salon they likely have stored your name, contact info, and services you have had in the past. A text file could be used for a situation where there is only a single user for the file. Let's say, a single hairdresser runs her own business. She could keep client information in text files since there would be no danger in other hairdressers accessing and changing her files.
+
+3) Describe one difference between SQL and other programming languages.
+  Databases use SQL to get results from data and manipulate it. Compared to most programming languages which are procedural, SQL is declarative meaning the programmer tells the program what they are looking for and the database determines the most efficient way to return the data.
+
+
+4) In your own words, explain how the pieces of a database system fit together at a high level.
+  A database is an application that is accessible using an interface, such as a server for example. A database has organized data in a systematic fashion that can be accessed in a clear way, based on a category, name, id, etc. Data is stored in a database in a binary non-readable format for humans.
+
+5) Explain the meaning of table, row, column, and value.
+  A database is laid out in a table. This table has columns that are different categories such as name, id, amount, message etc. One entry is usually in a row with related data. For instance, if I was a client at a business, I might have an row in my file that represent my visits and the nature of my visits to a doctor's office. Each row would represent a separate visit to the doctor's office. Each cell, where the row and column intersect, contain a value which is a piece of information that the column name describes.
+
+6) List 3 data types that can be used in a table.
+  Tables can store strings, integers, and floats.
+
+7) Given this payments table, provide an English description of the following queries and include their results:
+  1) find the dates and amounts of all payments.
+    Result:
+    date	amount
+  2016-05-01T00:00:00.000Z	1500.0000
+  2016-05-10T00:00:00.000Z	37.0000
+  2016-05-15T00:00:00.000Z	124.9300
+  2016-05-23T00:00:00.000Z	54.7200
+
+  2) find any purchases above $500.00 from payments.
+    Result:
+    amount
+    1500.0000
+
+  3) find all payments from "Mega Foods"
+  Result:
+
+  date	payee	amount	memo
+  2016-05-15T00:00:00.000Z	Mega Foods	124.9300	Groceries
+
+8) Given this users table, write SQL queries using the following criteria and include the output:
+  -The email and sign-up date for the user named DeAndre Data.
+  SELECT email, signup
+  FROM users
+  WHERE name = 'DeAndre Data';
+  Result:
+  email	signup
+  datad@comcast.net	2008-01-20T00:00:00.000Z
+
+  -The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+  SELECT userid
+  FROM users
+  WHERE email = 'aleesia.algorithm@uw.edu';
+
+  Result:
+  userid
+  1
+
+  -All the columns for the user ID equal to 4.
+  SELECT *
+  FROM users
+  WHERE userid = 4;
+
+  userid	name	email	signup
+  4	Brandy Boolean	bboolean@nasa.gov	1999-10-15T00:00:00.000Z
